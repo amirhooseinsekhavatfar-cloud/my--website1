@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amir Hosin Sekhavatfar</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#FF7A1A">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='160' cy='160' r='156' fill='%23050C18'/%3E%3Ccircle cx='160' cy='160' r='156' fill='none' stroke='%231E7FCC' stroke-width='4'/%3E%3Ctext x='160' y='185' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-weight='900' font-size='110' fill='%231E7FCC'%3EA%3C/text%3E%3C/svg%3E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AHS.dev">
+<meta name="description" content="Amir Hosin Sekhavatfar — Electrical Engineering student specializing in PLC, IoT, and industrial automation.">
+<meta property="og:title" content="Amir Hosin Sekhavatfar | Automation Engineer">
+<meta property="og:description" content="PLC programmer, IoT developer, Python enthusiast. Building the future through code and circuits.">
+<meta property="og:type" content="website">
+<!-- برای عکس پیش‌نمایش لینک (OG image)، یه عکس 1200x630 بذار توی assets/img/
+     و آدرسش رو این‌جا اضافه کن: <meta property="og:image" content="assets/img/og-cover.png"> -->
+<meta property="og:image" content="assets/img/og-cover.png">
+<meta name="twitter:image" content="assets/img/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amir Hosin Sekhavatfar | Automation Engineer">
+<meta name="twitter:description" content="PLC programmer, IoT developer, Python enthusiast. Building the future through code and circuits.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Amir Hosin Sekhavatfar">
+<!-- اگه دامنه‌ی سایتت رو داری/عوض شده، لینک‌های canonical و rss زیر رو با آدرس واقعی خودت جایگزین کن -->
+<link rel="canonical" href="https://your-domain.example/">
+<link rel="alternate" type="application/rss+xml" title="Amir Hosin Sekhavatfar — Blog RSS" href="rss.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Amir Hosin Sekhavatfar",
+  "jobTitle": "Electrical Engineering Student / PLC & IoT Developer",
+  "url": "https://your-domain.example/",
+  "email": "mailto:amirhooseinsekhavatfar@gmail.com",
+  "sameAs": [
+    "https://github.com/amirhooseinsekhavatfar-cloud",
+    "https://linkedin.com/in/amirhosins",
+    "https://t.me/AmirHosinSekhavatfar"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- استایل‌ها: ترتیب لود مهمه — فایل‌ها رو جابه‌جا نکن -->
+<link rel="stylesheet" href="css/01-tokens.css">
+<link rel="stylesheet" href="css/02-base.css">
+<link rel="stylesheet" href="css/03-layout.css">
+<link rel="stylesheet" href="css/04-sections-main.css">
+<link rel="stylesheet" href="css/05-sections-info.css">
+<link rel="stylesheet" href="css/06-media.css">
+<link rel="stylesheet" href="css/07-chatbot.css">
+<link rel="stylesheet" href="css/08-effects.css">
+<link rel="stylesheet" href="css/09-video.css">
+<link rel="stylesheet" href="css/10-extras.css">
+<link rel="stylesheet" href="css/20-theme-industrial.css">
+<link rel="stylesheet" href="css/30-simlink.css">
+<link rel="stylesheet" href="css/40-features.css">
+<link rel="stylesheet" href="css/50-pro.css">
+</head>
+<body data-bg="grid">
+
+<!-- ═══════════════════ JSON-DRIVEN CINEMATIC VIDEO INTRO ═══════════════════ -->
+<!-- ویدیوی مقدماتی سینمایی (اینترو) -->
+<div id="video-intro">
+  <canvas id="vi-grid-canvas"></canvas>
+  <div class="vi-glow-wash"></div>
+  <div class="vi-scanlines"></div>
+
+  <div class="vi-chip vi-chip-pulse">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="viChipGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FF7A1A"/>
+          <stop offset="100%" stop-color="#FFC857"/>
+        </linearGradient>
+      </defs>
+      <rect x="55" y="55" width="90" height="90" rx="6" fill="none" stroke="url(#viChipGrad)" stroke-width="2"/>
+      <rect x="68" y="68" width="64" height="64" rx="3" fill="rgba(255,122,26,0.12)" stroke="#7FE8A4" stroke-width="1"/>
+      <circle cx="100" cy="100" r="14" fill="none" stroke="#7FE8A4" stroke-width="1.5"/>
+      <g stroke="#35C7C2" stroke-width="2">
+        <line x1="55" y1="75" x2="35" y2="75"/><line x1="55" y1="100" x2="35" y2="100"/><line x1="55" y1="125" x2="35" y2="125"/>
+        <line x1="145" y1="75" x2="165" y2="75"/><line x1="145" y1="100" x2="165" y2="100"/><line x1="145" y1="125" x2="165" y2="125"/>
+        <line x1="75" y1="55" x2="75" y2="35"/><line x1="100" y1="55" x2="100" y2="35"/><line x1="125" y1="55" x2="125" y2="35"/>
+        <line x1="75" y1="145" x2="75" y2="165"/><line x1="100" y1="145" x2="100" y2="165"/><line x1="125" y1="145" x2="125" y2="165"/>
+      </g>
+      <g fill="#7FE8A4">
+        <circle cx="35" cy="75" r="3"/><circle cx="35" cy="100" r="3"/><circle cx="35" cy="125" r="3"/>
+        <circle cx="165" cy="75" r="3"/><circle cx="165" cy="100" r="3"/><circle cx="165" cy="125" r="3"/>
+        <circle cx="75" cy="35" r="3"/><circle cx="100" cy="35" r="3"/><circle cx="125" cy="35" r="3"/>
+        <circle cx="75" cy="165" r="3"/><circle cx="100" cy="165" r="3"/><circle cx="125" cy="165" r="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="vi-text-wrap">
+    <span class="vi-text" id="vi-text-target"></span>
+  </div>
+
+  <div class="vi-bars"><div class="vi-bar-top"></div><div class="vi-bar-bot"></div></div>
+  <button class="vi-skip" id="vi-skip-btn" type="button">Skip Intro »</button>
+</div>
+
+<!-- CINEMATIC INTRO -->
+<div id="cinema-intro">
+  <div class="cin-bars"><div class="cin-bar-top"></div><div class="cin-bar-bot"></div></div>
+  <div class="cin-logo-wrap">
+    <div class="cin-logo">&lt;AHS /&gt;</div>
+    <div class="cin-line"></div>
+    <div class="cin-tagline">Electrical Engineer · Automation · IoT</div>
+  </div>
+</div>
+<canvas id="particle-canvas"></canvas>
+
+<div id="scroll-progress"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+
+<div id="loader">
+  <div class="loader-logo">&lt;AHS /&gt;</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-pct" id="lpct">0%</div>
+</div>
+
+<nav id="navbar">
+  <a href="#hero" class="nav-logo" style="gap:10px">
+    <svg width="34" height="34" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+      <circle cx="160" cy="160" r="156" fill="#050C18"/>
+      <circle cx="160" cy="160" r="154" fill="none" stroke="#071828" stroke-width="1"/>
+      <circle cx="160" cy="160" r="131" fill="none" stroke="#0C2848" stroke-width="0.5"/>
+      <circle cx="160" cy="160" r="156" fill="none" stroke="#163860" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+      <line x1="160" y1="4"   x2="160" y2="18"  stroke="#1E7FCC" stroke-width="1.8"/>
+      <line x1="160" y1="302" x2="160" y2="316" stroke="#1E7FCC" stroke-width="1.8"/>
+      <line x1="4"   y1="160" x2="18"  y2="160" stroke="#1E7FCC" stroke-width="1.8"/>
+      <line x1="302" y1="160" x2="316" y2="160" stroke="#1E7FCC" stroke-width="1.8"/>
+      <circle cx="160" cy="4"   r="2.5" fill="#1E7FCC"/>
+      <circle cx="160" cy="316" r="2.5" fill="#1E7FCC"/>
+      <circle cx="4"   cy="160" r="2.5" fill="#1E7FCC"/>
+      <circle cx="316" cy="160" r="2.5" fill="#1E7FCC"/>
+      <path id="nl-arcT" d="M 35 160 A 125 125 0 0 1 285 160" fill="none"/>
+      <path id="nl-arcB" d="M 45 175 A 125 125 0 0 0 275 175" fill="none"/>
+      <text font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-weight="500" fill="#2A6FAA" letter-spacing="2.5">
+        <textPath href="#nl-arcT" startOffset="50%" text-anchor="middle">AMIRHOSIN  SEKHAVATFAR  ·  ENGINEER</textPath>
+      </text>
+      <text font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-weight="500" fill="#2A6FAA" letter-spacing="2.5">
+        <textPath href="#nl-arcB" startOffset="50%" text-anchor="middle">PLC  ·  ESP32  ·  IoT  ·  AUTOMATION</textPath>
+      </text>
+      <circle cx="160" cy="160" r="106" fill="#07101E" stroke="#0F2C50" stroke-width="1.2"/>
+      <circle cx="160" cy="100" r="32" fill="#060E1C" stroke="#1A5F9E" stroke-width="1.4"/>
+      <line x1="160" y1="80"  x2="160" y2="120" stroke="#1E7FCC" stroke-width="1.8"/>
+      <line x1="140" y1="100" x2="180" y2="100" stroke="#1E7FCC" stroke-width="1.8"/>
+      <circle cx="150" cy="90"  r="2.5" fill="#3FA0E8"/>
+      <circle cx="170" cy="90"  r="2.5" fill="#3FA0E8"/>
+      <circle cx="150" cy="110" r="2.5" fill="#3FA0E8"/>
+      <circle cx="170" cy="110" r="2.5" fill="#3FA0E8"/>
+      <circle cx="160" cy="100" r="6"   fill="none" stroke="#5BB8FF" stroke-width="1.3"/>
+      <circle cx="160" cy="100" r="2"   fill="#3FA0E8"/>
+      <text x="160" y="155" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-weight="800" font-size="19" fill="#D8EEFF" letter-spacing="3">AMIRHOSIN</text>
+      <line x1="90" y1="163" x2="230" y2="163" stroke="#0D2540" stroke-width="0.7"/>
+      <circle cx="90"  cy="163" r="2" fill="#1E7FCC"/>
+      <circle cx="230" cy="163" r="2" fill="#1E7FCC"/>
+      <text x="160" y="179" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-weight="300" font-size="9" fill="#3A80C0" letter-spacing="6">SEKHAVATFAR</text>
+      <text x="160" y="196" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-weight="500" font-size="7.5" fill="#1B5A90" letter-spacing="2.5">AUTOMATION ENGINEER</text>
+      <rect x="117" y="208" width="26" height="13" rx="4" fill="#1A5F9E"/>
+      <text x="130" y="218.5" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" font-weight="700" fill="#04090F">PLC</text>
+      <rect x="147" y="208" width="34" height="13" rx="4" fill="#134880"/>
+      <text x="164" y="218.5" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" font-weight="700" fill="#04090F">ESP32</text>
+      <rect x="185" y="208" width="26" height="13" rx="4" fill="#0D3262"/>
+      <text x="198" y="218.5" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" font-weight="700" fill="#04090F">IoT</text>
+      <circle cx="72"  cy="160" r="4" fill="#07101E" stroke="#1A5F9E" stroke-width="1"/>
+      <circle cx="248" cy="160" r="4" fill="#07101E" stroke="#1A5F9E" stroke-width="1"/>
+      <circle cx="72"  cy="160" r="1.5" fill="#1E7FCC"/>
+      <circle cx="248" cy="160" r="1.5" fill="#1E7FCC"/>
+    </svg>
+    AHS<span>.dev</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero" data-en="Home" data-fa="خانه">Home</a></li>
+    <li><a href="#about" data-en="About" data-fa="درباره">About</a></li>
+    <li><a href="#skills" data-en="Skills" data-fa="مهارت‌ها">Skills</a></li>
+    <li><a href="#projects" data-en="Projects" data-fa="پروژه‌ها">Projects</a></li><li><a href="#services" data-en="Services" data-fa="خدمات">Services</a></li><li><a href="#eng-tools" data-en="Tools" data-fa="ابزارها">Tools</a></li>
+    
+    <li><a href="#resume" data-en="Resume" data-fa="رزومه">Resume</a></li>
+    
+    
+    
+    
+    
+    
+    
+    <li><a href="#experience" data-en="Experience" data-fa="تجربه">Experience</a></li><li><a href="#contact" data-en="Contact" data-fa="تماس">Contact</a></li>
+    
+  </ul>
+  <div class="nav-right">
+    <button class="ico-btn" onclick="toggleTheme()" title="Toggle theme"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
+    <button class="lang-btn" onclick="toggleLang()"><i class="fa-solid fa-globe"></i><span id="lang-lbl">فارسی</span></button>
+    <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#hero" onclick="closeMobile()" data-en="Home" data-fa="خانه">Home</a>
+  <a href="#about" onclick="closeMobile()" data-en="About" data-fa="درباره">About</a>
+  <a href="#skills" onclick="closeMobile()" data-en="Skills" data-fa="مهارت‌ها">Skills</a>
+  <a href="#projects" onclick="closeMobile()" data-en="Projects" data-fa="پروژه‌ها">Projects</a>
+  <a href="#services" onclick="closeMobile()" data-en="Services" data-fa="خدمات">Services</a>
+  <a href="#eng-tools" onclick="closeMobile()" data-en="Tools" data-fa="ابزارها">Tools</a>
+  <a href="#resume" onclick="closeMobile()" data-en="Resume" data-fa="رزومه">Resume</a>
+  <a href="#contact" onclick="closeMobile()" data-en="Contact" data-fa="تماس">Contact</a>
+</div>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<!-- بخش اصلی بالای صفحه (معرفی) -->
+<section id="hero">
+  <div class="hero-in">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span><span id="hero-badge-text" data-en="Available for opportunities" data-fa="آماده همکاری">Available for opportunities</span></div>
+      <h1 class="hero-name">
+        <span data-en="Amir Hosin" data-fa="امیرحسین">Amir Hosin</span><br>
+        <span class="grad" data-en="Sekhavatfar" data-fa="سخاوتفر">Sekhavatfar</span>
+      </h1>
+      <div class="hero-typing-wrap"><span class="hero-typing" id="typing-el"></span></div>
+      <p class="hero-desc" data-en="Electrical Engineering student passionate about industrial automation, PLC programming, IoT systems, and embedded development. Building the future through code and circuits." data-fa="دانشجوی مهندسی برق با علاقه به اتوماسیون صنعتی، برنامه‌نویسی PLC، سیستم‌های IoT و توسعه سیستم‌های تعبیه‌شده.">
+        Electrical Engineering student passionate about industrial automation, PLC programming, IoT systems, and embedded development. Building the future through code and circuits.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-p"><i class="fa-solid fa-rocket"></i><span data-en="View Projects" data-fa="پروژه‌ها">View Projects</span></a>
+        <a href="#contact" class="btn btn-o"><i class="fa-solid fa-paper-plane"></i><span data-en="Get in Touch" data-fa="تماس">Get in Touch</span></a>
+        <a href="#" class="btn btn-o" download><i class="fa-solid fa-download"></i><span data-en="Download CV" data-fa="دانلود رزومه">Download CV</span></a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/amirhooseinsekhavatfar-cloud" target="_blank" title="GitHub" class="lnk-github"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/amirhosins" target="_blank" title="LinkedIn" class="lnk-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://t.me/AmirHosinSekhavatfar" target="_blank" title="Telegram" class="lnk-telegram"><i class="fab fa-telegram"></i></a>
+        <a href="#" target="_blank" title="Instagram" class="lnk-instagram u-hidden"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" title="YouTube" class="lnk-youtube u-hidden"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:amirhooseinsekhavatfar@gmail.com" title="Email" class="lnk-email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" data-target="15">0+</div><div class="stat-lbl" data-en="Projects" data-fa="پروژه">Projects</div></div>
+        <div><div class="stat-num" data-target="3">0+</div><div class="stat-lbl" data-en="Years" data-fa="سال">Years</div></div>
+        <div><div class="stat-num" data-target="8">0+</div><div class="stat-lbl" data-en="Tech Stacks" data-fa="فناوری">Tech Stacks</div></div>
+        <div><div class="stat-num" data-target="5">0+</div><div class="stat-lbl" data-en="Certs" data-fa="گواهی">Certs</div></div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-ring"><div class="hero-photo-circle" id="hero-photo-circle">
+        <svg id="hero-logo-svg" width="100%" height="100%" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" style="border-radius:50%">
+          <circle cx="160" cy="160" r="156" fill="#050C18"/>
+          <circle cx="160" cy="160" r="154" fill="none" stroke="#071828" stroke-width="1"/>
+          <circle cx="160" cy="160" r="144" fill="none" stroke="#0A2040" stroke-width="0.7"/>
+          <circle cx="160" cy="160" r="131" fill="none" stroke="#0C2848" stroke-width="0.5"/>
+          <circle cx="160" cy="160" r="156" fill="none" stroke="#163860" stroke-width="1.5" stroke-dasharray="1 7" stroke-linecap="round"/>
+          <line x1="160" y1="4" x2="160" y2="18" stroke="#1E7FCC" stroke-width="1.8"/>
+          <line x1="160" y1="302" x2="160" y2="316" stroke="#1E7FCC" stroke-width="1.8"/>
+          <line x1="4" y1="160" x2="18" y2="160" stroke="#1E7FCC" stroke-width="1.8"/>
+          <line x1="302" y1="160" x2="316" y2="160" stroke="#1E7FCC" stroke-width="1.8"/>
+          <circle cx="160" cy="4" r="2.5" fill="#1E7FCC"/>
+          <circle cx="160" cy="316" r="2.5" fill="#1E7FCC"/>
+          <circle cx="4" cy="160" r="2.5" fill="#1E7FCC"/>
+          <circle cx="316" cy="160" r="2.5" fill="#1E7FCC"/>
+          <path id="h-arcT" d="M 35 160 A 125 125 0 0 1 285 160" fill="none"/>
+          <path id="h-arcB" d="M 45 175 A 125 125 0 0 0 275 175" fill="none"/>
+          <text font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-weight="500" fill="#2A6FAA" letter-spacing="2.5"><textPath href="#h-arcT" startOffset="50%" text-anchor="middle">AMIRHOSIN  SEKHAVATFAR  ·  ENGINEER</textPath></text>
+          <text font-family="'Segoe UI',Arial,sans-serif" font-size="9.5" font-weight="500" fill="#2A6FAA" letter-spacing="2.5"><textPath href="#h-arcB" startOffset="50%" text-anchor="middle">PLC  ·  ESP32  ·  IoT  ·  AUTOMATION</textPath></text>
+          <circle cx="160" cy="160" r="106" fill="#07101E" stroke="#0F2C50" stroke-width="1.2"/>
+          <circle cx="160" cy="100" r="32" fill="#060E1C" stroke="#1A5F9E" stroke-width="1.4"/>
+          <line x1="160" y1="80" x2="160" y2="120" stroke="#1E7FCC" stroke-width="1.8"/>
+          <line x1="140" y1="100" x2="180" y2="100" stroke="#1E7FCC" stroke-width="1.8"/>
+          <circle cx="150" cy="90" r="2.5" fill="#3FA0E8"/>
+          <circle cx="170" cy="90" r="2.5" fill="#3FA0E8"/>
+          <circle cx="150" cy="110" r="2.5" fill="#3FA0E8"/>
+          <circle cx="170" cy="110" r="2.5" fill="#3FA0E8"/>
+          <circle cx="160" cy="100" r="6" fill="none" stroke="#5BB8FF" stroke-width="1.3"/>
+          <circle cx="160" cy="100" r="2" fill="#3FA0E8"/>
+          <text x="160" y="155" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-weight="800" font-size="19" fill="#D8EEFF" letter-spacing="3">AMIRHOSIN</text>
+          <line x1="90" y1="163" x2="230" y2="163" stroke="#0D2540" stroke-width="0.7"/>
+          <circle cx="90" cy="163" r="2" fill="#1E7FCC"/>
+          <circle cx="230" cy="163" r="2" fill="#1E7FCC"/>
+          <text x="160" y="179" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-weight="300" font-size="9" fill="#3A80C0" letter-spacing="6">SEKHAVATFAR</text>
+          <text x="160" y="196" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-weight="500" font-size="7.5" fill="#1B5A90" letter-spacing="2.5">AUTOMATION ENGINEER</text>
+          <rect x="117" y="208" width="26" height="13" rx="4" fill="#1A5F9E"/>
+          <text x="130" y="218.5" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" font-weight="700" fill="#04090F">PLC</text>
+          <rect x="147" y="208" width="34" height="13" rx="4" fill="#134880"/>
+          <text x="164" y="218.5" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" font-weight="700" fill="#04090F">ESP32</text>
+          <rect x="185" y="208" width="26" height="13" rx="4" fill="#0D3262"/>
+          <text x="198" y="218.5" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="7" font-weight="700" fill="#04090F">IoT</text>
+          <circle cx="72" cy="160" r="4" fill="#07101E" stroke="#1A5F9E" stroke-width="1"/>
+          <circle cx="248" cy="160" r="4" fill="#07101E" stroke="#1A5F9E" stroke-width="1"/>
+          <circle cx="72" cy="160" r="1.5" fill="#1E7FCC"/>
+          <circle cx="248" cy="160" r="1.5" fill="#1E7FCC"/>
+        </svg>
+        <i class="fa-solid fa-microchip u-hidden" id="hero-photo-icon"></i>
+        <img id="hero-photo-img" alt="Profile photo" src="assets/img/profile.jpg">
+      </div></div>
+      <div class="hero-glow"></div>
+      <div class="fc fc1"><div class="fci"><i class="fa-solid fa-industry"></i></div><span data-en="PLC / TIA Portal" data-fa="PLC / TIA Portal">PLC / TIA Portal</span></div>
+      <div class="fc fc2"><div class="fci"><i class="fab fa-python"></i></div><span data-en="Python Dev" data-fa="پایتون">Python Dev</span></div>
+      <div class="fc fc3"><div class="fci"><i class="fa-solid fa-wifi"></i></div><span data-en="IoT / ESP32" data-fa="اینترنت اشیا">IoT / ESP32</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<!-- درباره من -->
+<section id="about" class="sec">
+  <div class="inner">
+    <div style="margin-bottom:48px">
+      <span class="sec-label" data-en="01 — About Me" data-fa="۰۱ — درباره من">01 — About Me</span>
+      <h2 class="sec-title"><span data-en="Engineering Meets " data-fa="مهندسی و ">Engineering Meets </span><span class="grad" data-en="Innovation" data-fa="نوآوری">Innovation</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p data-en="I'm Amir Hosin Sekhavatfar, an Electrical Engineering student with a deep passion for industrial automation and embedded systems. My journey began with curiosity about how machines think and communicate — leading me into the world of PLCs, SCADA systems, and modern IoT architectures." data-fa="من امیرحسین سخاوتفر هستم، دانشجوی مهندسی برق با علاقه عمیق به اتوماسیون صنعتی و سیستم‌های تعبیه‌شده. سفرم با کنجکاوی درباره نحوه تفکر ماشین‌ها آغاز شد و مرا به دنیای PLC، SCADA و معماری‌های IoT مدرن کشاند.">
+          I'm Amir Hosin Sekhavatfar, an Electrical Engineering student with a deep passion for industrial automation and embedded systems. My journey began with curiosity about how machines think and communicate — leading me into the world of PLCs, SCADA systems, and modern IoT architectures.
+        </p>
+        <p data-en="Beyond the hardware, I build Python-based tools, script automation workflows, and develop ESP32-powered IoT devices. I believe the future of industry lies in the intelligent convergence of software and hardware." data-fa="فراتر از سخت‌افزار، ابزارهای پایتون می‌سازم، جریان‌های اتوماسیون را اسکریپت می‌کنم و دستگاه‌های IoT مبتنی بر ESP32 توسعه می‌دهم.">
+          Beyond the hardware, I build Python-based tools, script automation workflows, and develop ESP32-powered IoT devices. I believe the future of industry lies in the intelligent convergence of software and hardware.
+        </p>
+        <div class="about-hi">
+          <div class="hcard reveal"><div class="hci"><i class="fa-solid fa-bolt"></i></div><h4 data-en="Industrial Automation" data-fa="اتوماسیون صنعتی">Industrial Automation</h4><p data-en="PLC, SCADA, HMI" data-fa="PLC، SCADA، HMI">PLC, SCADA, HMI</p></div>
+          <div class="hcard reveal"><div class="hci"><i class="fa-solid fa-wifi"></i></div><h4 data-en="IoT Development" data-fa="توسعه IoT">IoT Development</h4><p data-en="ESP32, MQTT, sensors" data-fa="ESP32، MQTT، سنسور">ESP32, MQTT, sensors</p></div>
+          <div class="hcard reveal"><div class="hci"><i class="fab fa-python"></i></div><h4 data-en="Python Programming" data-fa="برنامه‌نویسی پایتون">Python Programming</h4><p data-en="Automation, data tools" data-fa="اتوماسیون، ابزار داده">Automation, data tools</p></div>
+          <div class="hcard reveal"><div class="hci"><i class="fa-solid fa-microchip"></i></div><h4 data-en="Embedded Systems" data-fa="سیستم‌های تعبیه‌شده">Embedded Systems</h4><p data-en="C/C++, Arduino, firmware" data-fa="C/C++، آردوینو">C/C++, Arduino, firmware</p></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:.92rem;font-weight:700;margin-bottom:20px;color:var(--tx2)" data-en="My Journey" data-fa="مسیر من">My Journey</h3>
+        <div class="tl" id="journey-timeline-list"></div>
+      </div>
+    </div>
+
+    <!-- GitHub Live Data -->
+    <div class="gh-section">
+      <span class="sec-label" style="margin-bottom:16px;display:block">GitHub Activity</span>
+      <div id="gh-profile-wrap">
+        <div class="gh-loading"><i class="fa-solid fa-spinner fa-spin" style="color:var(--ac2)"></i> Loading GitHub data…</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SKILLS ═══════════════════ -->
+<!-- مهارت‌ها -->
+<section id="skills" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-44">
+      <span class="sec-label" data-en="02 — Skills" data-fa="۰۲ — مهارت‌ها">02 — Skills</span>
+      <h2 class="sec-title"><span data-en="Technical " data-fa="مهارت‌های ">Technical </span><span class="grad" data-en="Expertise" data-fa="تخصصی">Expertise</span></h2>
+    </div>
+    <div class="skills-grid" id="skills-grid"></div>
+
+    <!-- Skill Radar — این نمودار وقتی حداقل ۳ مهارت توی skills.js باشه، خودکار
+         و به‌طور کامل بر اساس داده‌ی واقعی رسم می‌شه (توسط renderSkillRadar در app.js).
+         با کمتر از ۳ مهارت، نموداری نمایش داده نمی‌شه چون یه چندضلعی معنی‌دار نمی‌سازه. -->
+
+    <div class="radar-wrap" id="skill-radar-wrap"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<!-- چه کمکی می‌تونم بکنم — داده از js/data/services.js -->
+<section id="services" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="SV — Services" data-fa="SV — خدمات">SV — Services</span>
+      <h2 class="sec-title"><span data-en="How I Can " data-fa="چه کمکی ">How I Can </span><span class="grad" data-en="Help" data-fa="می‌تونم بکنم">Help</span></h2>
+      <p class="sec-sub u-mt-8" data-en="Four kinds of work I take on, each with a clear deliverable. Pick one and send a request." data-fa="چهار نوع کاری که قبول می‌کنم، هرکدوم با خروجی مشخص. یکی رو انتخاب کن و درخواستت رو بفرست.">Four kinds of work I take on, each with a clear deliverable. Pick one and send a request.</p>
+    </div>
+    <div class="pro-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROJECTS ═══════════════════ -->
+<!-- پروژه‌ها -->
+<section id="projects" class="sec">
+  <div class="inner">
+    <div class="u-mb-44">
+      <span class="sec-label" data-en="03 — Projects" data-fa="۰۳ — پروژه‌ها">03 — Projects</span>
+      <h2 class="sec-title"><span data-en="Featured " data-fa="پروژه‌های ">Featured </span><span class="grad" data-en="Work" data-fa="برجسته">Work</span></h2>
+    </div>
+    <div class="proj-carousel" id="proj-carousel">
+      <div class="pcar-split">
+        <div class="pcar-stage" id="pcar-stage"></div>
+        <div class="pcar-info">
+          <span class="pcar-cat" id="pcar-cat"></span>
+          <div class="ptitle" id="pcar-title"></div>
+          <div class="pdesc" id="pcar-desc"></div>
+          <div class="ptags" id="pcar-tags"></div>
+          <div class="plinks" id="pcar-links"></div>
+          <div class="pcar-nav">
+            <button class="pcar-arrow" id="pcar-prev" aria-label="Previous project"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="pcar-dots" id="pcar-dots"></div>
+            <button class="pcar-arrow" id="pcar-next" aria-label="Next project"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ENGINEERING TOOLS ═══════════════════ -->
+<!-- ماشین‌حساب‌های مهندسی — منطق در js/pro.js -->
+<section id="eng-tools" class="sec">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="TL — Engineering Tools" data-fa="TL — ابزارهای مهندسی">TL — Engineering Tools</span>
+      <h2 class="sec-title"><span data-en="Calculators You Can " data-fa="ماشین‌حساب‌هایی که ">Calculators You Can </span><span class="grad" data-en="Actually Use" data-fa="واقعاً به کار می‌آن">Actually Use</span></h2>
+      <p class="sec-sub u-mt-8" data-en="Quick tools for everyday automation work. They run in your browser, nothing is sent anywhere." data-fa="ابزارهای سریع برای کار روزمره‌ی اتوماسیون. داخل مرورگر اجرا می‌شن و هیچ داده‌ای جایی ارسال نمی‌شه.">Quick tools for everyday automation work. They run in your browser, nothing is sent anywhere.</p>
+    </div>
+    <div id="calc-root"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ LIVE SIMULATOR ═══════════════════ -->
+<!-- اسلایدر شبیه‌سازها — داده از js/data/simulators.js، فایل‌ها در simulations/ -->
+<section id="simulator" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="SM — Live Simulator" data-fa="SM — شبیه‌ساز زنده">SM — Live Simulator</span>
+      <h2 class="sec-title"><span data-en="Try the " data-fa="خودت ">Try the </span><span class="grad" data-en="Simulations" data-fa="امتحان کن">Simulations</span></h2>
+      <p class="sec-sub u-mt-8" data-en="Interactive PLC and automation simulations that run right in your browser. Slide through them, open any one full screen." data-fa="شبیه‌سازهای تعاملی PLC و اتوماسیون که همین‌جا داخل مرورگر اجرا می‌شن. بینشون اسلاید کن و هرکدوم رو تمام‌صفحه باز کن.">Interactive PLC and automation simulations that run right in your browser. Slide through them, open any one full screen.</p>
+    </div>
+    <div id="sim-root"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CODE LIBRARY ═══════════════════ -->
+<!-- کتابخانه کد — داده از js/data/codes.js -->
+<section id="code-lib" class="sec">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="CL — Code Library" data-fa="CL — کتابخانه کد">CL — Code Library</span>
+      <h2 class="sec-title"><span data-en="Ready-to-Use " data-fa="قطعه‌های ">Ready-to-Use </span><span class="grad" data-en="Snippets" data-fa="کد آماده">Snippets</span></h2>
+    </div>
+    <div class="pro-filterbar" id="code-filterbar"></div>
+    <div class="code-grid" id="code-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ RESOURCES ═══════════════════ -->
+<!-- منابع قابل دانلود — داده از js/data/pdfs.js -->
+<section id="resources" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="RS — Resources" data-fa="RS — منابع">RS — Resources</span>
+      <h2 class="sec-title"><span data-en="Free " data-fa="منابع ">Free </span><span class="grad" data-en="Downloads" data-fa="رایگان">Downloads</span></h2>
+      <p class="sec-sub u-mt-8" data-en="Reference sheets and documents I wrote or collected. Take what helps." data-fa="چیت‌شیت‌ها و اسنادی که نوشتم یا جمع کردم. هرچی به کارت میاد بردار.">Reference sheets and documents I wrote or collected. Take what helps.</p>
+    </div>
+    <div class="pdf-grid" id="pdf-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ RESUME ═══════════════════ -->
+<!-- رزومه -->
+<section id="resume" class="sec">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="05 — Resume" data-fa="۰۵ — رزومه">05 — Resume</span>
+      <h2 class="sec-title"><span data-en="Education & " data-fa="تحصیلات و ">Education & </span><span class="grad" data-en="Experience" data-fa="تجربه">Experience</span></h2>
+      <a href="#" id="cv-download-btn" class="btn btn-p" style="margin-top:18px" download><i class="fa-solid fa-download"></i><span data-en="Download Full CV" data-fa="دانلود رزومه کامل">Download Full CV</span></a>
+    </div>
+    <div class="resume-grid">
+      <div class="res-col">
+        <h3><i class="fa-solid fa-graduation-cap"></i><span data-en="Education" data-fa="تحصیلات">Education</span></h3>
+        <div class="tl" id="resume-education-list"></div>
+      </div>
+      <div class="res-col">
+        <h3><i class="fa-solid fa-briefcase"></i><span data-en="Experience" data-fa="تجربه">Experience</span></h3>
+        <div class="tl" id="resume-experience-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULLSCREEN REEL OVERLAY -->
+<div class="fullscreen-overlay" id="fullscreen-overlay" onclick="closeReelIfOutside(event)">
+
+  <!-- ① VIDEO PLAYER MODAL (landscape — YouTube / Aparat / MP4) -->
+  <div class="fs-video-modal" id="fs-video-modal">
+    <div class="fs-vm-top">
+      <button class="fs-vm-close" onclick="closeReel()"><i class="fa-solid fa-xmark"></i></button>
+      <div id="fs-vm-media-wrap"></div>
+    </div>
+    <div class="fs-vm-info">
+      <div class="fs-vm-title" id="fs-vm-title"></div>
+      <div class="fs-vm-meta">
+        <span id="fs-vm-views"></span>
+        <span>·</span>
+        <span id="fs-vm-date"></span>
+      </div>
+      <div class="fs-vm-tags" id="fs-vm-tags"></div>
+      <div class="fs-vm-actions">
+        <button class="fs-vm-btn" id="fs-vm-like-btn" onclick="toggleFsLike()"><i class="fa-regular fa-heart"></i><span id="fs-like-count">0</span></button>
+        <button class="fs-vm-btn" id="fs-vm-save-btn" onclick="toggleFsSave()"><i class="fa-regular fa-bookmark"></i><span>Save</span></button>
+        <button class="fs-vm-btn" onclick=""><i class="fa-solid fa-share-nodes"></i><span>Share</span></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- پنجره‌ی تمام‌صفحه برای باز کردن فایل‌های HTML بخش «ابزارهای مهندسی» -->
+<div class="tool-fullscreen-modal" id="tool-fullscreen-modal">
+  <div class="tool-fs-top">
+    <div class="tool-fs-title" id="tool-fs-title"></div>
+    <button class="tool-fs-close" onclick="closeEngTool()">
+      <i class="fa-solid fa-xmark"></i>
+      <span data-en="Close" data-fa="بستن">Close</span>
+    </button>
+  </div>
+  <iframe id="tool-fs-iframe" class="tool-fs-iframe" src="about:blank" title="Engineering Tool"></iframe>
+</div>
+
+<!-- بخش تجربه تعاملی -->
+<section id="experience" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-44">
+      <span class="sec-label" data-en="EX — Experience" data-fa="تجربه — حرفه‌ای">EX — Experience</span>
+      <h2 class="sec-title"><span data-en="Skills &amp; " data-fa="مهارت‌ها و ">Skills &amp; </span><span class="grad" data-en="Experience" data-fa="تجربه">Experience</span></h2>
+      <p class="sec-sub u-mt-8" data-en="My technical background across industrial automation, IoT, and embedded systems." data-fa="پیشینه فنی من در اتوماسیون صنعتی، IoT و سیستم‌های تعبیه‌شده.">My technical background across industrial automation, IoT, and embedded systems.</p>
+    </div>
+    <div class="exp-tabs">
+      <button class="exp-tab active" onclick="switchExpTab('tools',this)" data-en="Tools & Tech" data-fa="ابزار و فناوری">Tools &amp; Tech</button>
+      <button class="exp-tab" onclick="switchExpTab('timeline',this)" data-en="Timeline" data-fa="تایم‌لاین">Timeline</button>
+      <button class="exp-tab" onclick="switchExpTab('certs',this)" data-en="Certifications" data-fa="گواهی‌نامه‌ها">Certifications</button>
+    </div>
+
+    <!-- Panel 1: Tools -->
+    <div id="exp-tools" class="exp-panel active">
+      <div class="exp-grid" id="exp-tools-grid"></div>
+    </div>
+
+    <!-- Panel 2: Timeline -->
+    <div id="exp-timeline" class="exp-panel">
+      <div class="exp-timeline" id="exp-timeline-list"></div>
+    </div>
+
+    <!-- Panel 3: Certs -->
+    <div id="exp-certs" class="exp-panel">
+      <div class="exp-grid" id="exp-certs-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROJECT REQUEST ═══════════════════ -->
+<!-- فرم درخواست پروژه — پیام آماده می‌سازه و از تلگرام / واتساپ / ایمیل می‌فرسته -->
+<section id="request" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="RQ — Project Request" data-fa="RQ — درخواست پروژه">RQ — Project Request</span>
+      <h2 class="sec-title"><span data-en="Tell Me " data-fa="درخواستت رو ">Tell Me </span><span class="grad" data-en="What You Need" data-fa="بنویس">What You Need</span></h2>
+      <p class="sec-sub u-mt-8" data-en="Fill in four fields and I get a clear message instead of a vague one. You choose how to send it." data-fa="چهار فیلد رو پر کن تا به‌جای پیام مبهم، یک پیام واضح بهم برسه. خودت انتخاب می‌کنی از چه راهی بفرستی.">Fill in four fields and I get a clear message instead of a vague one. You choose how to send it.</p>
+    </div>
+    <form class="pro-form" id="request-form" novalidate></form>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<!-- تماس با من -->
+<section id="contact" class="sec">
+  <div class="inner">
+    <div class="u-mb-44">
+      <span class="sec-label" data-en="09 — Contact" data-fa="۰۹ — تماس">09 — Contact</span>
+      <h2 class="sec-title"><span data-en="Get In " data-fa="با من ">Get In </span><span class="grad" data-en="Touch" data-fa="در تماس باشید">Touch</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 data-en="Let's work together" data-fa="بیایید با هم کار کنیم">Let's work together</h3>
+        <p data-en="Have a project in mind or want to discuss automation, IoT, or embedded systems? I'm always open to new opportunities and collaborations." data-fa="پروژه‌ای در ذهن دارید یا می‌خواهید درباره اتوماسیون، IoT یا سیستم‌های تعبیه‌شده صحبت کنیم؟">Have a project in mind or want to discuss automation, IoT, or embedded systems? I'm always open to new opportunities and collaborations.</p>
+        <!-- From Uiverse.io by MijailVillegas — تطبیق داده‌شده با آیکون‌های واقعی سایت (Location / LinkedIn / Email / GitHub / Telegram) -->
+        <div class="social-orbit-card">
+          <ul class="social-orbit-list">
+            <li class="social-orbit-item">
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <a href="https://linkedin.com/in/amirhosins" target="_blank" rel="noopener">
+                <span class="social-orbit-icon"><i class="fab fa-linkedin-in"></i></span>
+              </a>
+              <div class="social-orbit-tooltip" data-en="LinkedIn" data-fa="لینکدین">LinkedIn</div>
+            </li>
+            <li class="social-orbit-item">
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <a href="mailto:amirhooseinsekhavatfar@gmail.com">
+                <span class="social-orbit-icon"><i class="fa-solid fa-envelope"></i></span>
+              </a>
+              <div class="social-orbit-tooltip" data-en="Email" data-fa="ایمیل">Email</div>
+            </li>
+            <li class="social-orbit-item">
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <a href="https://github.com/amirhooseinsekhavatfar-cloud" target="_blank" rel="noopener">
+                <span class="social-orbit-icon"><i class="fab fa-github"></i></span>
+              </a>
+              <div class="social-orbit-tooltip" data-en="GitHub" data-fa="گیت‌هاب">GitHub</div>
+            </li>
+            <li class="social-orbit-item">
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <span class="social-orbit-ring"></span>
+              <a href="https://t.me/AmirHosinSekhavatfar" target="_blank" rel="noopener">
+                <span class="social-orbit-icon"><i class="fab fa-telegram"></i></span>
+              </a>
+              <div class="social-orbit-tooltip" data-en="Telegram" data-fa="تلگرام">Telegram</div>
+            </li>
+          </ul>
+        </div>
+        <!-- کارت دیجیتال — ساخته‌شده توسط js/pro.js (buildDigitalCard) -->
+        <div class="dc-slot" id="digital-card"></div>
+      </div>
+      <form class="cf" onsubmit="submitForm(event)">
+        <div class="frow">
+          <div class="fg"><label data-en="Full Name" data-fa="نام کامل">Full Name</label><input type="text" placeholder="John Doe" required></div>
+          <div class="fg"><label data-en="Email Address" data-fa="آدرس ایمیل">Email Address</label><input type="email" placeholder="john@example.com" required></div>
+        </div>
+        <div class="fg"><label data-en="Subject" data-fa="موضوع">Subject</label><input type="text" placeholder="Project Collaboration"></div>
+        <div class="fg"><label data-en="Message" data-fa="پیام">Message</label><textarea rows="5" placeholder="Tell me about your project..." required></textarea></div>
+        <button type="submit" class="btn btn-p u-block-center"><i class="fa-solid fa-paper-plane"></i><span data-en="Send Message" data-fa="ارسال پیام">Send Message</span></button>
+      <div class="form-success"><i class="fa-solid fa-envelope-circle-check"></i><h4 data-en="Email client opened!" data-fa="ایمیل باز شد!">Email client opened!</h4><p data-en="Complete sending in your email app." data-fa="ارسال را در برنامه ایمیل تکمیل کنید.">Complete sending in your email app.</p></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<!-- پاورقی سایت (پایین صفحه) -->
+<footer>
+  <div class="footer-grid">
+    <div class="fb-brand"><h4>AHS.dev</h4><p data-en="Electrical Engineering student bridging industrial automation and modern software." data-fa="دانشجوی مهندسی برق که پل اتوماسیون صنعتی و نرم‌افزار مدرن را می‌سازد.">Electrical Engineering student bridging industrial automation and modern software.</p></div>
+    <div class="footer-col"><h5 data-en="Navigation" data-fa="ناوبری">Navigation</h5><ul><li><a href="#hero" data-en="Home" data-fa="خانه">Home</a></li><li><a href="#about" data-en="About" data-fa="درباره">About</a></li><li><a href="#skills" data-en="Skills" data-fa="مهارت‌ها">Skills</a></li><li><a href="#projects" data-en="Projects" data-fa="پروژه‌ها">Projects</a></li></ul></div>
+    <div class="footer-col"><h5 data-en="More" data-fa="بیشتر">More</h5><ul><li><a href="#code-lib" data-en="Code Library" data-fa="کتابخانه کد">Code Library</a></li><li><a href="#resources" data-en="Downloads" data-fa="دانلودها">Downloads</a></li><li><a href="#request" data-en="Request a Project" data-fa="درخواست پروژه">Request a Project</a></li><li><a href="rss.xml" class="rss-link" target="_blank"><i class="fa-solid fa-rss"></i> RSS Feed</a></li></ul></div>
+    <div class="footer-col"><h5 data-en="Connect" data-fa="ارتباط">Connect</h5><ul><li><a href="https://github.com/amirhooseinsekhavatfar-cloud" target="_blank" class="lnk-github">GitHub</a></li><li><a href="https://linkedin.com/in/amirhosins" target="_blank" class="lnk-linkedin">LinkedIn</a></li><li><a href="https://t.me/AmirHosinSekhavatfar" target="_blank" class="lnk-telegram">Telegram</a></li><li><a href="mailto:amirhooseinsekhavatfar@gmail.com" class="lnk-email">Email</a></li></ul></div>
+  </div>
+  <div class="footer-bot">
+    <span data-en="© 2025 Amir Hosin Sekhavatfar. All rights reserved." data-fa="© ۱۴۰۴ امیرحسین سخاوتفر. تمام حقوق محفوظ است.">© 2025 Amir Hosin Sekhavatfar. All rights reserved.</span>
+    <div class="f-soc"><a href="https://github.com/amirhooseinsekhavatfar-cloud" target="_blank" class="lnk-github"><i class="fab fa-github"></i></a><a href="https://linkedin.com/in/amirhosins" target="_blank" class="lnk-linkedin"><i class="fab fa-linkedin-in"></i></a><a href="https://t.me/AmirHosinSekhavatfar" target="_blank" class="lnk-telegram"><i class="fab fa-telegram"></i></a></div>
+  </div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<!-- ═══════════════════ SITE CONTENT DATA FILES ═══════════════════ -->
+<!-- برای تغییر محتوای سایت فقط فایل‌های داخل js/data/ رو ویرایش کن -->
+<!-- To edit site content, ONLY edit the files inside js/data/ -->
+<script src="js/data/site-config.js" defer></script>
+<script src="js/data/skills.js" defer></script>
+<script src="js/data/projects.js" defer></script>
+<script src="js/data/achievements.js" defer></script>
+<script src="js/data/posts.js" defer></script>
+<script src="js/data/posts-settings.js" defer></script>
+<script src="js/data/blog-posts.js" defer></script>
+<script src="js/data/latest-activity.js" defer></script>
+<script src="js/data/experience.js" defer></script>
+<script src="js/data/journey-resume.js" defer></script>
+<script src="js/data/codes.js" defer></script>
+<script src="js/data/pdfs.js" defer></script>
+<script src="js/data/videos.js" defer></script>
+<script src="js/data/simlink-posts.js" defer></script>
+<script src="js/data/chatbot-knowledge.js" defer></script>
+<script src="js/data/faq-knowledge.js" defer></script>
+<script src="js/data/testimonials.js" defer></script>
+<script src="js/data/services.js" defer></script>
+<script src="js/data/simulators.js" defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+<!-- لایه‌ی رابط کاربری (قبلاً js/interactions.js) -->
+<script src="js/ui/01-shell.js" defer></script>
+<script src="js/ui/02-contact.js" defer></script>
+<script src="js/ui/03-integrations.js" defer></script>
+<script src="js/ui/04-players.js" defer></script>
+<script src="js/ui/05-posts-chat.js" defer></script>
+<script src="js/ui/06-filters.js" defer></script>
+<script src="js/ui/07-cinematic.js" defer></script>
+<script src="js/shatter-glass.js" defer></script>
+
+<!-- ═══════════════════ SIMLINK PAGE ═══════════════════ -->
+<!-- صفحه سیم‌لینک -->
+
+<div id="simlink-page">
+  <div class="sl-topbar">
+    <button class="sl-back-btn" onclick="closeSimLink()"><i class="fa-solid fa-arrow-right"></i> بازگشت</button>
+    <div class="sl-topbar-title">
+      <i class="fa-solid fa-diagram-project"></i>
+      لیست سیمولینک پروژه‌ها
+      <span class="sl-topbar-badge" id="sl-badge-count">0 پست</span>
+    </div>
+  </div>
+  <div class="sl-body">
+    <div class="sl-header-card">
+      <div class="sl-header-icon"><i class="fa-solid fa-diagram-project"></i></div>
+      <div class="sl-header-info">
+        <h2>لیست سیمولینک پروژه‌ها</h2>
+        <p>این صفحه مخصوص لینک‌ها، توضیحات و به‌روزرسانی‌های پروژه‌های سیمولینک است. می‌توانید پست‌هایی با عکس، لینک سایت، ویدیو و هشتگ اضافه کنید.</p>
+      </div>
+    </div>
+    <div class="sl-feed" id="sl-feed">
+      <div class="sl-empty" id="sl-empty">
+        <i class="fa-solid fa-diagram-project"></i>
+        <p>هنوز پستی اضافه نشده است.<br>برای افزودن پست جدید، فایل <strong>js/data/simlink-posts.js</strong> را ویرایش کنید.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ AI CHATBOT ═══════════════════ -->
+<!-- ربات گفتگوی هوشمند -->
+<div id="ai-chat-bubble">
+  <div id="ai-chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fa-solid fa-robot"></i><div class="chat-avatar-dot"></div></div>
+      <div class="chat-header-info">
+        <h4 data-en="Amir's AI Assistant" data-fa="دستیار هوش مصنوعی امیر">Amir's AI Assistant</h4>
+        <span><i class="fa-solid fa-circle" style="font-size:.45rem"></i> Online — Ask me anything</span>
+      </div>
+      <button type="button" class="chat-lang-toggle" id="chat-lang-toggle" onclick="toggleChatLang()" title="Chat language / زبان چت">
+        <i class="fa-solid fa-globe"></i>
+        <span id="chat-lang-toggle-lbl">فا</span>
+      </button>
+      <button class="chat-close" onclick="toggleChat()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot" id="chat-welcome" data-en="👋 Hi! I'm an AI assistant for Amir Hosin's portfolio. Ask me about his skills, projects, experience, or how to get in touch!" data-fa="👋 سلام! من دستیار هوش مصنوعی پورتفولیوی امیرحسین هستم. درباره‌ی مهارت‌ها، پروژه‌ها، تجربه یا راه‌های تماس ازم بپرس!">👋 Hi! I'm an AI assistant for Amir Hosin's portfolio. Ask me about his skills, projects, experience, or how to get in touch!</div>
+    </div>
+
+    <!-- Floating FAQ popup: stays in the DOM permanently, only toggles visibility -->
+    <div class="chat-faq-popup" id="chat-faq-popup">
+      <div class="chat-faq-popup-inner">
+        <button type="button" class="chat-faq-popup-close" onclick="toggleChatFaq(false)" aria-label="close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="chat-faq-slider" id="chat-faq-slider"></div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <button type="button" class="chat-faq-ball" id="chat-faq-ball" onclick="toggleChatFaq()" title="Suggested questions" aria-label="Suggested questions">
+        <i class="fa-solid fa-lightbulb"></i>
+      </button>
+      <input class="chat-input" id="chat-input" type="text" placeholder="Ask about Amir..." data-ph-en="Ask about Amir..." data-ph-fa="درباره‌ی امیر بپرس..." onkeydown="if(event.key==='Enter')sendChat()">
+      <button class="chat-send" onclick="sendChat()"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button id="ai-chat-fab" onclick="toggleChat()" title="Chat with AI Assistant">
+    <i class="fa-solid fa-robot" id="chat-fab-icon"></i>
+    <div id="ai-chat-badge">AI</div>
+  </button>
+</div>
+
+<script src="js/chatbot/config.js" defer></script>
+<script src="js/chatbot/utils.js" defer></script>
+<script src="js/chatbot/normalizer.js" defer></script>
+<script src="js/chatbot/synonyms.js" defer></script>
+<script src="js/chatbot/search.js" defer></script>
+<script src="js/chatbot/ranking.js" defer></script>
+<script src="js/chatbot/intent.js" defer></script>
+<script src="js/chatbot/memory.js" defer></script>
+<script src="js/chatbot/context.js" defer></script>
+<script src="js/chatbot/history.js" defer></script>
+<script src="js/chatbot/answer.js" defer></script>
+<script src="js/chatbot/engine.js" defer></script>
+<script src="js/chatbot/faq-slider.js" defer></script>
+<script src="js/chatbot/pdf-knowledge.js" defer></script>
+
+<!-- هسته‌ی اپ و رندر محتوا (قبلاً js/app.js) -->
+<script src="js/app/01-toast.js" defer></script>
+<script src="js/app/02-render.js" defer></script>
+<script src="js/app/03-video-data.js" defer></script>
+<script src="js/app/04-video-filters.js" defer></script>
+<script src="js/app/05-library-posts.js" defer></script>
+<script src="js/app/06-video-player.js" defer></script>
+<script src="js/features.js" defer></script>
+<script src="js/send.js" defer></script>
+<script src="js/vendor/qrcode.js" defer></script>
+<script src="js/sim-slider.js" defer></script>
+<script src="js/pro.js" defer></script>
+<script src="js/pwa.js" defer></script>
+
+</body>
+</html>

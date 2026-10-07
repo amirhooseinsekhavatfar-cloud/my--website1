@@ -1,0 +1,40 @@
+{
+  "scene": "Engineering Portfolio Intro",
+  "duration": "15s",
+  "style": "Cinematic Futuristic Technology",
+  "camera": "Dynamic Drone + Smooth Tracking",
+  "environment": "Dark futuristic laboratory filled with electronic circuits, oscilloscopes, ESP32 boards, IoT devices, solar panels, robotics systems and holographic interfaces",
+  "subject": "Young Electrical Engineering Student and IoT Developer working on advanced ESP32 projects",
+  "actions": [
+    "Electronic circuits illuminate with blue energy",
+    "ESP32 board powers up",
+    "Holographic dashboard appears",
+    "IoT devices connect in real time",
+    "Engineering projects emerge from digital particles",
+    "GitHub repositories float in holographic space",
+    "Solar energy monitoring system activates",
+    "Smart home automation interface appears",
+    "Portfolio projects showcase in cinematic sequence"
+  ],
+  "visual_effects": [
+    "Neon blue glow",
+    "Floating holograms",
+    "Particle effects",
+    "Energy waves",
+    "Digital transitions",
+    "Volumetric lighting"
+  ],
+  "text_sequence": [
+    "ali Sekhavatfar",
+    "Electrical Engineering Student",
+    "ESP32 & IoT Developer",
+    "Embedded Systems Engineer",
+    "Portfolio 2026"
+  ],
+  "quality": "Ultra Realistic",
+  "resolution": "4K",
+  "fps": "60",
+  "lighting": "Cinematic Blue Technology Lighting",
+  "color_palette": "Dark Black, Electric Blue, White",
+  "ending": "Camera zooms into futuristic portfolio dashboard displaying projects, GitHub profile and engineering achievements"
+}

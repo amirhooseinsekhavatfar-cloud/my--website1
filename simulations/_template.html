@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Simulator</title>
+<!--
+  قالب شبیه‌ساز — این فایل رو کپی کن، اسمش رو عوض کن و محتواش رو بنویس.
+  قواعد:
+    • یک فایل مستقل باشه (CSS و JS داخل همین فایل).
+    • ریسپانسیو باشه (روی موبایل هم دیده بشه).
+    • پس‌زمینه‌ی تیره بذار تا با سایت هماهنگ باشه.
+    • از اینترنت چیزی لود نکن، مگه این‌که لازم باشه (آفلاین کار نمی‌کنه).
+    • از localStorage استفاده نکن مگه واقعاً لازم باشه (هر شبیه‌ساز در iframe اجرا می‌شه).
+  بعد از ساختن: یک بلوک جدید در js/data/simulators.js اضافه کن.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #0A0E14; color: #EDEFF2; font: 14px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; }
+  body { padding: 16px; }
+  .btn { font: inherit; cursor: pointer; color: #EDEFF2; background: #131A22; border: 1px solid rgba(255,176,32,.25); border-radius: 99px; padding: 8px 16px; }
+  .btn:hover { border-color: #FFB020; }
+</style>
+</head>
+<body>
+  <h3>My Simulator</h3>
+  <p>Value: <b id="v">0</b></p>
+  <button class="btn" id="b">Start / Stop</button>
+<script>
+  // الگوی پیشنهادی: یک حلقه‌ی اسکن مثل PLC
+  var running = false, value = 0;
+  document.getElementById('b').onclick = function () { running = !running; };
+  setInterval(function () {            // هر ۱۰۰ میلی‌ثانیه
+    if (running) value += 1;
+    document.getElementById('v').textContent = value;
+  }, 100);
+</script>
+</body>
+</html>

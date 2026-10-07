@@ -1,0 +1,49 @@
+<!--@@REMOVED@@-->
+
+<!-- ═══════════════════ BOOKING ═══════════════════ -->
+<!-- رزرو وقت / نوبت‌دهی -->
+<section id="booking" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="10 — Book a Meeting" data-fa="۱۰ — رزرو جلسه">10 — Book a Meeting</span>
+      <h2 class="sec-title"><span data-en="Schedule a " data-fa="رزرو ">Schedule a </span><span class="grad" data-en="Session" data-fa="جلسه">Session</span></h2>
+    </div>
+    <div class="booking-wrap">
+      <div class="booking-grid">
+        <div class="booking-card">
+          <h4 data-en="Select a Date — January 2025" data-fa="تاریخ انتخاب کنید — دی ۱۴۰۳">Select a Date — January 2025</h4>
+          <div class="cal-grid" id="cal-grid">
+            <div class="cal-header">Su</div><div class="cal-header">Mo</div><div class="cal-header">Tu</div><div class="cal-header">We</div><div class="cal-header">Th</div><div class="cal-header">Fr</div><div class="cal-header">Sa</div>
+          </div>
+        </div>
+        <div class="booking-card">
+          <h4 data-en="Available Times" data-fa="زمان‌های موجود">Available Times</h4>
+          <div class="time-slots" id="time-slots">
+            <button class="ts" onclick="selectTime(this)">09:00 AM</button>
+            <button class="ts" onclick="selectTime(this)">10:00 AM</button>
+            <button class="ts" onclick="selectTime(this)">11:00 AM</button>
+            <button class="ts" onclick="selectTime(this)">01:00 PM</button>
+            <button class="ts" onclick="selectTime(this)">02:00 PM</button>
+            <button class="ts" onclick="selectTime(this)">03:00 PM</button>
+            <button class="ts" onclick="selectTime(this)">04:00 PM</button>
+            <button class="ts" onclick="selectTime(this)">05:00 PM</button>
+          </div>
+        </div>
+      </div>
+      <div class="booking-card" style="margin-bottom:0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+          <div class="fg"><label data-en="Meeting Type" data-fa="نوع جلسه">Meeting Type</label>
+            <select style="padding:11px 13px;border-radius:11px;background:var(--glass);border:1px solid var(--bdr);color:var(--tx);font-family:var(--fn);font-size:.86rem;outline:none;width:100%">
+              <option data-en="Online Call (30 min)" data-fa="تماس آنلاین (۳۰ دقیقه)">Online Call (30 min)</option>
+              <option data-en="Technical Consultation" data-fa="مشاوره فنی">Technical Consultation</option>
+              <option data-en="Project Discussion" data-fa="بحث پروژه">Project Discussion</option>
+            </select>
+          </div>
+          <div class="fg"><label data-en="Your Name" data-fa="نام شما">Your Name</label><input type="text" placeholder="John Doe"></div>
+        </div>
+        <div class="fg" style="margin-bottom:14px"><label data-en="Notes (optional)" data-fa="یادداشت (اختیاری)">Notes (optional)</label><textarea rows="3" placeholder="What would you like to discuss?"></textarea></div>
+        <button class="btn btn-p u-block-center" onclick="bookMeeting(this)"><i class="fa-solid fa-calendar-check"></i><span data-en="Confirm Booking" data-fa="تأیید رزرو">Confirm Booking</span></button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+
+<!-- ═══════════════════ CODE LIBRARY ═══════════════════ -->
+<!-- کتابخانه کدها -->
+<section id="code-lib" class="sec sec--alt">
+  <div class="inner">
+    <div class="u-mb-40">
+      <span class="sec-label" data-en="04 — Code Library" data-fa="۰۴ — کتابخانه کد">04 — Code Library</span>
+      <h2 class="sec-title"><span data-en="Ready-to-Use " data-fa="قطعه‌های ">Ready-to-Use </span><span class="grad" data-en="Snippets" data-fa="کد آماده">Snippets</span></h2>
+    </div>
+    <div class="code-grid" id="code-grid">
+      <div class="cc"><div class="cc-head"><div class="dots-row"><span></span><span></span><span></span></div><div class="cc-lang">PYTHON</div><button class="cc-copy" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i></button></div><pre class="cc-pre"><span class="cm"># Modbus TCP reader</span>
+<span class="kw">from</span> pymodbus.client <span class="kw">import</span> ModbusTcpClient
+
+<span class="kw">def</span> <span class="fn">read_regs</span>(host, addr, n):
+    c = ModbusTcpClient(host)
+    c.connect()
+    r = c.read_holding_registers(
+        addr, n, unit=<span class="num">1</span>)
+    c.close()
+    <span class="kw">return</span> r.registers
+
+data = read_regs(
+    <span class="str">"192.168.1.5"</span>, <span class="num">0</span>, <span class="num">10</span>)
+<span class="fn">print</span>(<span class="str">f"Regs: {data}"</span>)</pre><div class="cc-foot"><div class="cc-title" data-en="Modbus TCP Reader" data-fa="خواننده Modbus TCP">Modbus TCP Reader</div><div class="cc-desc" data-en="Read holding registers from any Modbus device" data-fa="خواندن رجیسترها از Modbus">Read holding registers from any Modbus device</div></div></div>
+      <div class="cc"><div class="cc-head"><div class="dots-row"><span></span><span></span><span></span></div><div class="cc-lang">C++ / ESP32</div><button class="cc-copy" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i></button></div><pre class="cc-pre"><span class="cm">// ESP32 MQTT Publisher</span>
+<span class="kw">#include</span> <span class="str">&lt;WiFi.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;PubSubClient.h&gt;</span>
+
+WiFiClient espClient;
+PubSubClient mqtt(espClient);
+
+<span class="kw">void</span> <span class="fn">publish</span>(<span class="kw">float</span> temp) {
+  String p = <span class="str">"{\"temp\":"</span>
+           + String(temp) + <span class="str">"}"</span>;
+  mqtt.publish(
+    <span class="str">"sensor/data"</span>, p.c_str());
+}</pre><div class="cc-foot"><div class="cc-title" data-en="ESP32 MQTT Publisher" data-fa="ناشر MQTT ESP32">ESP32 MQTT Publisher</div><div class="cc-desc" data-en="Publish sensor JSON to MQTT broker" data-fa="ارسال JSON سنسور به MQTT">Publish sensor JSON to MQTT broker</div></div></div>
+      <div class="cc"><div class="cc-head"><div class="dots-row"><span></span><span></span><span></span></div><div class="cc-lang">PYTHON</div><button class="cc-copy" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i></button></div><pre class="cc-pre"><span class="cm"># OPC-UA value reader</span>
+<span class="kw">from</span> opcua <span class="kw">import</span> Client
+
+<span class="kw">def</span> <span class="fn">read_opc</span>(url, node_id):
+    c = Client(url)
+    <span class="kw">try</span>:
+        c.connect()
+        node = c.get_node(node_id)
+        <span class="kw">return</span> node.get_value()
+    <span class="kw">finally</span>:
+        c.disconnect()
+
+v = read_opc(
+  <span class="str">"opc.tcp://localhost:4840"</span>,
+  <span class="str">"ns=2;i=1"</span>)
+<span class="fn">print</span>(<span class="str">f"Value: {v}"</span>)</pre><div class="cc-foot"><div class="cc-title" data-en="OPC-UA Reader" data-fa="خواننده OPC-UA">OPC-UA Reader</div><div class="cc-desc" data-en="Read node values from OPC-UA server" data-fa="خواندن مقادیر از OPC-UA">Read node values from OPC-UA server</div></div></div>
+    </div>
+  </div>
+</section>

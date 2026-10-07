@@ -1,0 +1,231 @@
+/* ════════════════════════════════════════
+   03-layout.css — اسکلت بخش‌ها، دکمه‌ها، کارت شیشه‌ای
+   بخشی از css/main.css قدیمی (خط 529 تا 742)
+   ترتیب لود مهمه: فایل‌ها رو جابه‌جا نکن.
+   ════════════════════════════════════════ */
+/* استایل عمومی مشترک همه بخش‌های صفحه */
+.sec {
+  position: relative;
+  z-index: 1;
+  padding: 96px 5%;
+  width: 100%;
+  overflow: hidden
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%
+}
+
+/* برچسب کوچک بالای عنوان هر بخش */
+.sec-label {
+  display: block;
+  font-family: var(--mo);
+  font-size: .7rem;
+  font-weight: 500;
+  color: var(--ac2);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 10px
+}
+
+.sec-title {
+  font-size: clamp(1.8rem, 4.5vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 14px
+}
+
+.sec-sub {
+  color: var(--tx2);
+  font-size: .96rem;
+  max-width: 500px;
+  line-height: 1.8
+}
+
+.grad {
+  background: linear-gradient(90deg, var(--ac2), var(--ac3), #FFC857, var(--ac2));
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradFlow 6s linear infinite
+}
+
+@keyframes gradFlow {
+  0% {
+    background-position: 0% 50%
+  }
+
+  100% {
+    background-position: 300% 50%
+  }
+}
+
+/* استایل پایه دکمه‌ها */
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: .86rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  font-family: var(--fn);
+  cursor: pointer;
+  transition: var(--tr);
+  text-decoration: none;
+  border: none;
+  white-space: nowrap
+}
+
+.btn-p {
+  background: linear-gradient(135deg, var(--ac), var(--ac2));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(255, 176, 32, .35);
+  animation: btnBreathe 3.2s ease-in-out infinite
+}
+
+.btn-p::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .35) 48%, transparent 66%);
+  background-size: 250% 100%;
+  background-position: 150% 0;
+  transition: background-position .7s ease
+}
+
+.btn-p:hover::before {
+  background-position: -50% 0
+}
+
+@keyframes btnBreathe {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(255, 176, 32, .35)
+  }
+
+  50% {
+    box-shadow: 0 4px 26px rgba(255, 176, 32, .55)
+  }
+}
+
+.btn-p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 176, 32, .5);
+  animation-play-state: paused
+}
+
+.btn-o {
+  background: transparent;
+  border: 1.5px solid var(--bdr);
+  color: var(--tx2)
+}
+
+.btn-o:hover {
+  border-color: var(--ac);
+  color: var(--tx);
+  background: var(--glass2)
+}
+
+/* ── Generic glass cards (.gc) ── */
+
+.gc {
+  position: relative;
+  background: var(--glass);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r2);
+  backdrop-filter: blur(16px);
+  transition: var(--tr)
+}
+
+.gc::before,
+.gc::after,
+.hcard::before,
+.hcard::after,
+.pdf-card::before,
+.pdf-card::after,
+.booking-card::before,
+.booking-card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--ac);
+  opacity: 0;
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events: none;
+  transform: scale(.6)
+}
+
+.gc::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 4px
+}
+
+.gc::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 4px
+}
+
+.gc:hover {
+  border-color: rgba(41, 211, 199, .4);
+  box-shadow: 0 0 36px var(--glow2), 0 18px 52px rgba(0, 0, 0, .38);
+  transform: translateY(-6px) scale(1.012)
+}
+
+.gc:hover::before,
+.gc:hover::after,
+.hcard:hover::before,
+.hcard:hover::after,
+.pdf-card:hover::before,
+.pdf-card:hover::after,
+.booking-card:hover::before,
+.booking-card:hover::after {
+  opacity: 1;
+  transform: scale(1)
+}
+
+.hcard,
+.pdf-card,
+.booking-card {
+  position: relative
+}
+
+/* بخش اصلی بالای صفحه (معرفی / Hero) */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+  z-index: 1
+}
+
+
+/* ════════════════════════════════════════
+   UTILITIES — کلاس‌های کمکی
+   جایگزین style="..."های تکراری داخل index.html
+   ════════════════════════════════════════ */
+.sec--alt{background:var(--bg3)}
+.u-mb-40{margin-bottom:40px}
+.u-mb-44{margin-bottom:44px}
+.u-mt-8{margin-top:8px}
+.u-hidden{display:none}
+.u-btn-sm{padding:7px 13px;font-size:.74rem}
+.u-block-center{width:100%;justify-content:center}

@@ -1,0 +1,81 @@
+{
+  "css": [
+    "css/01-tokens.css",
+    "css/02-base.css",
+    "css/03-layout.css",
+    "css/04-sections-main.css",
+    "css/05-sections-info.css",
+    "css/06-media.css",
+    "css/07-chatbot.css",
+    "css/08-effects.css",
+    "css/09-video.css",
+    "css/10-extras.css",
+    "css/20-theme-industrial.css",
+    "css/30-simlink.css",
+    "css/40-features.css",
+    "css/50-pro.css"
+  ],
+  "data": [
+    "js/data/site-config.js",
+    "js/data/skills.js",
+    "js/data/projects.js",
+    "js/data/achievements.js",
+    "js/data/posts.js",
+    "js/data/posts-settings.js",
+    "js/data/blog-posts.js",
+    "js/data/latest-activity.js",
+    "js/data/experience.js",
+    "js/data/journey-resume.js",
+    "js/data/codes.js",
+    "js/data/pdfs.js",
+    "js/data/videos.js",
+    "js/data/simlink-posts.js",
+    "js/data/chatbot-knowledge.js",
+    "js/data/faq-knowledge.js",
+    "js/data/testimonials.js",
+    "js/data/services.js",
+    "js/data/simulators.js"
+  ],
+  "chatbot": [
+    "js/chatbot/config.js",
+    "js/chatbot/utils.js",
+    "js/chatbot/normalizer.js",
+    "js/chatbot/synonyms.js",
+    "js/chatbot/search.js",
+    "js/chatbot/ranking.js",
+    "js/chatbot/intent.js",
+    "js/chatbot/memory.js",
+    "js/chatbot/context.js",
+    "js/chatbot/history.js",
+    "js/chatbot/answer.js",
+    "js/chatbot/engine.js",
+    "js/chatbot/faq-slider.js",
+    "js/chatbot/pdf-knowledge.js"
+  ],
+  "app": [
+    "js/app/01-toast.js",
+    "js/app/02-render.js",
+    "js/app/03-video-data.js",
+    "js/app/04-video-filters.js",
+    "js/app/05-library-posts.js",
+    "js/app/06-video-player.js",
+    "js/send.js",
+    "js/vendor/qrcode.js",
+    "js/sim-slider.js",
+    "js/pro.js",
+    "js/pwa.js"
+  ],
+  "ui": [
+    "js/ui/01-shell.js",
+    "js/ui/02-contact.js",
+    "js/ui/03-integrations.js",
+    "js/ui/04-players.js",
+    "js/ui/05-posts-chat.js",
+    "js/ui/06-filters.js",
+    "js/ui/07-cinematic.js"
+  ],
+  "other": [
+    "js/shatter-glass.js",
+    "js/features.js"
+  ]
+}

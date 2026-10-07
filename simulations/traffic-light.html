@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traffic Light Sequence</title>
+<!-- نمونه‌ی شبیه‌ساز. یک فایل مستقل: CSS و JS داخل خودش. با فایل خودت جایگزینش کن. -->
+<style>
+  :root { --bg:#0A0E14; --bg2:#131A22; --tx:#EDEFF2; --tx2:#90A0AC; --ac:#FFB020; --ac2:#29D3C7; --bd:rgba(255,176,32,.2); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--tx); font: 14px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; }
+  body { padding: 16px; display: grid; grid-template-columns: minmax(180px, 240px) 1fr; gap: 18px; align-content: start; }
+  .rig { background: var(--bg2); border: 1px solid var(--bd); border-radius: 14px; padding: 16px; display: grid; gap: 14px; justify-items: center; }
+  .lamp-box { background: #05070a; border-radius: 12px; padding: 12px; display: grid; gap: 10px; }
+  .lamp { width: 46px; height: 46px; border-radius: 50%; background: #2a2f36; transition: background .15s, box-shadow .15s; }
+  .lamp.r.on { background: #ff4d4d; box-shadow: 0 0 22px #ff4d4d; }
+  .lamp.y.on { background: #ffc233; box-shadow: 0 0 22px #ffc233; }
+  .lamp.g.on { background: #3ddc84; box-shadow: 0 0 22px #3ddc84; }
+  .pair { display: flex; gap: 18px; }
+  .pair small { display: block; text-align: center; color: var(--tx2); margin-top: 4px; font-size: 11px; }
+  .side { display: grid; gap: 12px; align-content: start; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  button { font: inherit; cursor: pointer; color: var(--tx); background: var(--bg2); border: 1px solid var(--bd); border-radius: 99px; padding: 8px 16px; }
+  button:hover { border-color: var(--ac); }
+  button.on { background: var(--ac); border-color: var(--ac); color: #0A0E14; }
+  table { width: 100%; border-collapse: collapse; font: 12px ui-monospace, Consolas, monospace; }
+  th, td { text-align: start; padding: 5px 8px; border-bottom: 1px solid var(--bd); }
+  th { color: var(--tx2); font-weight: 400; }
+  td.v { font-weight: 700; color: #57646E; } td.v.on { color: #3ddc84; }
+  .state { color: var(--ac2); font-family: ui-monospace, Consolas, monospace; }
+  @media (max-width: 560px) { body { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="rig">
+  <div class="pair">
+    <div><div class="lamp-box"><div class="lamp r" id="ns-r"></div><div class="lamp y" id="ns-y"></div><div class="lamp g" id="ns-g"></div></div><small>NS</small></div>
+    <div><div class="lamp-box"><div class="lamp r" id="ew-r"></div><div class="lamp y" id="ew-y"></div><div class="lamp g" id="ew-g"></div></div><small>EW</small></div>
+  </div>
+</div>
+<div class="side">
+  <div class="row">
+    <button id="auto" class="on" data-t="Auto">Auto</button>
+    <button id="flash" data-t="Night flash">Night flash</button>
+    <button id="ped" data-t="Pedestrian request">Pedestrian request</button>
+  </div>
+  <div>State: <b class="state" id="st">NS_GREEN</b> · <span id="tm">0.0</span> s</div>
+  <table>
+    <tr><th>Tag</th><th>State</th></tr>
+    <tr><td>NS_R / NS_Y / NS_G</td><td class="v" id="v-ns">—</td></tr>
+    <tr><td>EW_R / EW_Y / EW_G</td><td class="v" id="v-ew">—</td></tr>
+    <tr><td>PED_REQ</td><td class="v" id="v-ped">0</td></tr>
+  </table>
+</div>
+<script>
+  // ── یک «اسکن PLC» هر ۱۰۰ میلی‌ثانیه ──
+  var STATES = {            // نام حالت : [مدت (ثانیه), حالت بعدی, NS, EW]  (R,Y,G)
+    NS_GREEN:  [8, 'NS_YELLOW', 'G', 'R'],
+    NS_YELLOW: [2, 'EW_GREEN',  'Y', 'R'],
+    EW_GREEN:  [8, 'EW_YELLOW', 'R', 'G'],
+    EW_YELLOW: [2, 'NS_GREEN',  'R', 'Y']
+  };
+  var state = 'NS_GREEN', t = 0, mode = 'auto', ped = false, blink = false;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function lamps(prefix, c) { ['r', 'y', 'g'].forEach(function (k) { $(prefix + '-' + k).classList.toggle('on', k.toUpperCase() === c); }); }
+
+  function scan() {
+    if (mode === 'flash') {
+      blink = !blink;
+      lamps('ns', blink ? 'Y' : ''); lamps('ew', blink ? 'Y' : '');
+      $('st').textContent = 'FLASH'; $('v-ns').textContent = $('v-ew').textContent = blink ? 'Y' : '—';
+      return;
+    }
+    var s = STATES[state];
+    t += 0.1;
+    // درخواست عابر: سبز فعلی بعد از حداقل ۳ ثانیه کوتاه می‌شه
+    var cut = ped && (state === 'NS_GREEN' || state === 'EW_GREEN') && t >= 3;
+    if (t >= s[0] || cut) { state = s[1]; t = 0; if (cut) ped = false; s = STATES[state]; }
+    lamps('ns', s[2]); lamps('ew', s[3]);
+    $('st').textContent = state; $('tm').textContent = t.toFixed(1);
+    $('v-ns').textContent = s[2]; $('v-ew').textContent = s[3];
+    $('v-ped').textContent = ped ? '1' : '0'; $('v-ped').classList.toggle('on', ped);
+  }
+  $('auto').onclick = function () { mode = 'auto'; $('auto').classList.add('on'); $('flash').classList.remove('on'); };
+  $('flash').onclick = function () { mode = 'flash'; $('flash').classList.add('on'); $('auto').classList.remove('on'); };
+  $('ped').onclick = function () { if (mode === 'auto') ped = true; };
+  setInterval(scan, 100);
+</script>
+</body>
+</html>

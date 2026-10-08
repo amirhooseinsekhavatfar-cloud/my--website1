@@ -108,8 +108,8 @@ window.SiteData.config = {
   //
   // تلگرام سریع بدون Worker (⚠️ توکن داخل کد سایت عمومی می‌شه؛ هرکس می‌تونه با ربات تو
   // پیام بفرسته. برای بازدیدکننده‌ی داخل ایران بدون VPN هم کار نمی‌کنه):
-  telegramBotToken: '',
-  telegramChatId: '',
+  telegramBotToken: '8900493024:AAFIQqqdnId1vPTWw95TfcMkGS0a_nAr-GA',
+  telegramChatId: '5603193178',
   //
   // ایمیل: کلید رایگان Web3Forms (از web3forms.com با وارد کردن ایمیلت می‌گیری؛ کلید طبق
   // طراحی سرویس عمومیه و مشکلی نداره) یا آدرس Formspree. فقط یکی کافیه.
